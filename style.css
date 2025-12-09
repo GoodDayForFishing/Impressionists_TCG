@@ -7,37 +7,30 @@
   overflow-x: hidden; 
 }
 
+:root {
+  --font-title: "tt-frantz-a", sans-serif;
+  --font-body: "bahnschrift", sans-serif;
+  --background-color: #3c43a1;
+  --body-shadow: #101b69;
+  --font-yellow: #ffcc00;
+}
+
+
 body{
-    background-color: #3c43a1;
+    background-color: var(--background-color);
   }
 
-/* Fonts Adobe */
-.podiumfont{
-    font-family: "podium-soft-variable", sans-serif;
-    font-variation-settings: "wdth" 100;
-}
 
-.ttfrantza{
-    font-family: "tt-frantz-a", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-}
-
-.bahnschrift{
-  font-family: "bahnschrift", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
 
 /* Div Principale de la navbar */
 .navbar{
-    background-color: #101b69;
-    color: #f2d527;
+    background-color: var(--body-shadow);
+    color: var(--font-yellow);
     padding-left: 4.6296vh;
     padding-right: 4.6296vh;
     padding-top: 0vh;
     padding-bottom: 0vh;
-    box-shadow: 0vh 0.9259vh 0.463vh #101b69;
+    box-shadow: 0vh 0.9259vh 0.463vh var(--body-shadow);
 }
 
 /* Div de la navbar qui va contenir les liens cliquables */
@@ -46,7 +39,7 @@ body{
     display: flex; 
     align-items: center; 
     justify-content: space-between;
-    font-family: "tt-frantz-a", sans-serif;
+    font-family: var(--font-title);
     font-style: normal;
     font-size: 3.7037vh;
     padding-top: 0.9259vh;
@@ -78,11 +71,10 @@ a {
 a:hover {
   text-decoration: underline; 
   text-decoration-thickness: 0.2778vh;
-  color: #ffcc00;
+  color: var(--font-yellow);
 }
 
 a.a-logo {
-  color: inherit;        
   text-decoration: none;
   font-size: 7.4074vh;
 }
@@ -92,7 +84,7 @@ a.a-logo:hover {
   /* Souligne le logo principal */
   text-decoration: underline; 
   text-decoration-thickness: 0.2778vh;
-  color: #ffcc00; 
+  color: var(--font-yellow);
 }
 
 
@@ -114,7 +106,6 @@ a.a-logo:hover {
 img {
   width: 115%;
   height: auto;
-  
 }
 
 /* Flou progressif de la peinture, de la gauche vers la droite */
@@ -128,13 +119,14 @@ button{
     position: absolute;
     padding : 1.3889vh;
     text-align: left;
-    font-family: "bahnschrift", sans-serif;
+    font-family: var(--font-body);
     font-weight: bolder;
     font-size: large;
     color: #080a1f;
-    background-color:#ffcc00; 
+    background-color:var(--font-yellow);
     border-radius: 0.9259vh;
     border: none;
+    transition: transform .13s ease, background-color .13s ease;
 }
 
 /* Action quand la souris est sur le bouton */
@@ -145,9 +137,7 @@ button:hover{
     border-radius: 0.9259vh;
     border: none;
     /* Augmentation de sa taille */
-    transform: scale(1.05, 1.05);
-    /* Transition smooth */
-    transition: transform 130ms ease-in-out;
+    transform: scale(1.05);    /* Transition smooth */
 }
 
 
@@ -163,10 +153,10 @@ button:hover{
     margin-top: -1.5vh;
     font-size: 15vh;
     padding-top: 5vh;
-    font-family: "tt-frantz-a", sans-serif;
+    font-family: var(--font-title);;
     text-decoration: underline;
-    color: #f2d527;
-    background-color: #101b69;
+    color: var(--font-yellow);
+    background-color: var(--body-shadow);
     
 }
 
@@ -175,7 +165,7 @@ button:hover{
   /* Espacer les div de manière égale */
   display: flex;
   justify-content: space-between;
-  background-color: #101b69;
+  background-color: var(--body-shadow);
   padding-top: 10vh;
   padding-bottom: 10vh;
   padding-left: 10%;
@@ -200,7 +190,7 @@ button:hover{
   height: 100%;
   transition: transform 0.8s;
   transform-style: preserve-3d;
-  border: 0.5vh solid #ffcc00;
+  border: 0.5vh solid var(--font-yellow);
   border-radius: 2vh;
 
 }
@@ -208,6 +198,7 @@ button:hover{
 /* Rotation de la carte de 180deg quand la souris est par dessus */
 .card:hover .card-inner {
   transform: rotateY(180deg);
+  backface-visibility: hidden;
 }
 
 /* Parametre du text et image contenur dans la card */
@@ -232,9 +223,9 @@ button:hover{
   display: flex; 
   justify-content: center; 
   align-items: center; 
-  font-family: "tt-frantz-a", sans-serif;
+  font-family: var(--font-title);;
   font-size: 5vh;
-  color: #f2d527;
+  color: var(--font-yellow);
   text-shadow: 3px 3px 5px #000000;
 }
 
@@ -247,7 +238,7 @@ button:hover{
   /* Place les divs au centre sur l'axe x et y */
   justify-content: center;
   align-items: center;
-  background-color: #3c43a1;
+  background-color: var(--background-color);
   overflow:hidden;
   padding-bottom: 5vh;
 
@@ -268,10 +259,10 @@ button:hover{
   /* Spécifie l'espace de texte */
   width: 600px;
   height: 400px;
-  color: #f2d527;
+  color: var(--font-yellow);
   text-align: center;
   overflow: hidden;
-  font-family: "tt-frantz-a", sans-serif;
+  font-family: var(--font-title);;
   font-size: 4vh;
   /* Offre une limite au texte de 600 par 400 */
   box-sizing: border-box;
@@ -280,7 +271,7 @@ button:hover{
 /* Style Texte h2 */
 .container-text h2{
   color: white;
-  font-family: "bahnschrift", sans-serif;
+  font-family: var(--font-body);
   font-size: 2.5vh;
   word-wrap: break-word;
   padding: 1px;
@@ -323,8 +314,8 @@ button:hover{
 
 
 h3{
-    font-family: "tt-frantz-a", sans-serif;
-    color: #f2d527;        
+    font-family: var(--font-title);;
+    color: var(--font-yellow);     
     text-decoration: none;
     font-size: 7vh;
 }
@@ -373,13 +364,9 @@ h3{
   position: relative;
   outline: none;
   border: 2px solid #264143;
-  background-color:#f2d527;
+  background-color:var(--font-yellow);
   width: 290px;
   padding: 12px 10px;
   border-radius: 4px;
   font-size: 15px;
-}
-
-/* Retire les effets de la balise a */
-.icon a{
 }
