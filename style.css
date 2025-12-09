@@ -15,10 +15,18 @@
   --font-yellow: #ffcc00;
 }
 
+.darkmode {
+  --font-title: "tt-frantz-a", sans-serif;
+  --font-body: "bahnschrift", sans-serif;
+  --background-color: #E07A5F;
+  --body-shadow: #3D405B;
+  --font-yellow: #f7b801;
+}
 
 body{
     background-color: var(--background-color);
   }
+
 
 
 
