@@ -16,3 +16,11 @@ themeSwitch.addEventListener("click", () => {
     darkmode !== "active" ? enableDarkmode() : disableDarkmode()
 })
 // 
+
+
+function showTab(name){
+    document.getElementById('trending-cards').style.display="none";
+    document.getElementById('trending-cards2').style.display="none";
+    document.getElementById(name).style.display="flex";
+
+}
