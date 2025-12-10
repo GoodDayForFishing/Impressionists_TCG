@@ -13,14 +13,17 @@
   --background-color: #3c43a1;
   --body-shadow: #101b69;
   --font-yellow: #ffcc00;
+  --font-white: #e6e9ff;
 }
 
 .darkmode {
   --font-title: "tt-frantz-a", sans-serif;
   --font-body: "bahnschrift", sans-serif;
-  --background-color: #E07A5F;
-  --body-shadow: #3D405B;
-  --font-yellow: #f7b801;
+  --background-color: #e6e9ff;
+  --body-shadow: #b3bce7;
+  --font-yellow: #101b69;
+  --font-white: #3c43a1;
+
 }
 
 body{
@@ -225,8 +228,7 @@ button:hover{
 
 /* Rotation de la carte de 180deg quand la souris est par dessus */
 .card:hover .card-inner {
-  transform: rotateY(180deg);
-  backface-visibility: hidden;
+  transform: rotateY(-180deg);
 }
 
 /* Parametre du text et image contenur dans la card */
@@ -298,7 +300,15 @@ button:hover{
 
 /* Style Texte h2 */
 .container-text h2{
-  color: white;
+  color: var(--font-white);
+  font-family: var(--font-body);
+  font-size: 2.5vh;
+  word-wrap: break-word;
+  padding: 1px;
+}
+
+.white-text{
+  color: #e6e9ff;
   font-family: var(--font-body);
   font-size: 2.5vh;
   word-wrap: break-word;
@@ -344,6 +354,13 @@ button:hover{
 h3{
     font-family: var(--font-title);;
     color: var(--font-yellow);     
+    text-decoration: none;
+    font-size: 7vh;
+}
+
+h4{
+    font-family: var(--font-title);;
+    color: #e6e9ff;     
     text-decoration: none;
     font-size: 7vh;
 }
