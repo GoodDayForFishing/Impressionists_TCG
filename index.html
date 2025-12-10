@@ -46,17 +46,11 @@
 
         <!-- Trending Cards -->
         <a href="" class="trending-title">Trending Cards</a>
-
-            <nav class="navbar">
-            <div class="menu">
-                <ul>
-                    <li><button onclick="showTab('trending-cards')">Cheapest</button></li>
-                    <li><button onclick="showTab('trending-cards2')">Rarest</button></li>
-                    <li><button>Popular</button></li>
-                </ul>
-                
-            </div>
-        </nav> 
+        <div class="menu">
+                    <button onclick="showTab('trending-cards')">Cheapest</button>
+                    <button onclick="showTab('trending-cards2')">Rarest</button>
+                    <button onclick="showTab('trending-cards3')">Popular</button>
+        </div>
         
 
         <div class="trending-cards" id="trending-cards">   
@@ -109,7 +103,6 @@
             <div class="card">
                 <div class="card-inner">
                     <div class="card-front">
-                        <img src="img/Cafe.jpeg" class="img-card">
                     </div>
                     <div class="card-back">
                         <p>AAAA<br>by Vincent AAAAA Gogh</p>
@@ -120,7 +113,6 @@
             <div class="card">
                 <div class="card-inner">
                     <div class="card-front">
-                        <img src="img/Champs.jpeg" class="img-card">
                     </div>
                     <div class="card-back">
                         <p>Wheatfield with Crows<br>by Vincent van Gogh</p>
@@ -129,6 +121,37 @@
             </div>
         </div>
 
+        <div class="trending-cards" id='trending-cards3' style="display: none;">   
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                    </div>
+                    <div class="card-back">
+                        <p>CCCCCCCCCCCCCC<br>CCCCCCCCCCCCCC</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                    </div>
+                    <div class="card-back">
+                        <p>CCCCCCCCCCCCCCCCC<br>by Vincent AAAAA Gogh</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                    </div>
+                    <div class="card-back">
+                        <p>CCCCCCCCCCCCC<br>by Vincent van Gogh</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="separator"></div>
 

@@ -21,6 +21,7 @@ themeSwitch.addEventListener("click", () => {
 function showTab(name){
     document.getElementById('trending-cards').style.display="none";
     document.getElementById('trending-cards2').style.display="none";
+    document.getElementById('trending-cards3').style.display="none";
     document.getElementById(name).style.display="flex";
 
 }
