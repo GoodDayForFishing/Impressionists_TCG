@@ -16,6 +16,7 @@
   --font-white: #e6e9ff;
   --color-h3: #ffcc00;     
   --color-button:#080a1f;
+  --color-alt:#101b69;
 
 }
 
@@ -28,7 +29,7 @@
   --font-white: #3c43a1;
   --color-h3: #e6e9ff;
   --color-button:#e6e9ff;
-
+  --color-alt: #b3bce7;
 }
 
 body{
@@ -191,8 +192,7 @@ button:hover{
     padding-top: 5vh;
     font-family: var(--font-title);;
     text-decoration: underline;
-    color: var(--font-yellow);
-    background-color: var(--body-shadow);
+    color: var(--color-h3);
     
 }
 
@@ -260,7 +260,7 @@ button:hover{
   align-items: center; 
   font-family: var(--font-title);;
   font-size: 5vh;
-  color: var(--font-yellow);
+  color: var(--color-h3);
   text-shadow: 3px 3px 5px #000000;
 }
 
@@ -420,3 +420,4 @@ h4{
   border-radius: 4px;
   font-size: 15px;
 }
+
