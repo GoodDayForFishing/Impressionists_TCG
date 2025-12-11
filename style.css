@@ -14,6 +14,9 @@
   --body-shadow: #101b69;
   --font-yellow: #ffcc00;
   --font-white: #e6e9ff;
+  --color-h3: #ffcc00;     
+  --color-button:#080a1f;
+
 }
 
 .darkmode {
@@ -23,6 +26,8 @@
   --body-shadow: #b3bce7;
   --font-yellow: #101b69;
   --font-white: #3c43a1;
+  --color-h3: #e6e9ff;
+  --color-button:#e6e9ff;
 
 }
 
@@ -154,7 +159,7 @@ button{
     font-family: var(--font-body);
     font-weight: bolder;
     font-size: large;
-    color: #080a1f;
+    color: var(--color-button);
     background-color:var(--font-yellow);
     border-radius: 0.9259vh;
     border: none;
@@ -353,7 +358,7 @@ button:hover{
 
 h3{
     font-family: var(--font-title);;
-    color: var(--font-yellow);     
+    color: var(--color-h3);     
     text-decoration: none;
     font-size: 7vh;
 }
