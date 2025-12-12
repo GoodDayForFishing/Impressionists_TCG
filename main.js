@@ -1,21 +1,24 @@
 let darkmode = localStorage.getItem("darkmode")
 const themeSwitch = document.getElementById("theme-switch")
 
-const enableDarkmode = () => {
+function enableDarkmode(){
     document.body.classList.add("darkmode")
     localStorage.setItem("darkmode", "active")
 }
 
-const disableDarkmode = () => {
+function disableDarkmode() {
     document.body.classList.remove("darkmode")
     localStorage.removeItem("darkmode")
 }
 
-themeSwitch.addEventListener("click", () => {
-    darkmode = localStorage.getItem("darkmode")
-    darkmode !== "active" ? enableDarkmode() : disableDarkmode()
-})
-// 
+themeSwitch.addEventListener("click", function () {
+    if (localStorage.getItem("darkmode") === "active") {
+        disableDarkmode();
+    } else {
+        enableDarkmode();
+    }
+});
+
 
 
 function showTab(name){
